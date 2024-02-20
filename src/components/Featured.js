@@ -38,18 +38,21 @@ const Featured = () => {
   ];
 
   return (
-    <Slider {...settings}>
-      {mockData.map((car) => (
-        <div className="featured-car" key={car.id}>
-          <div className="info-wrapper">
-            <h3>
-              {car.make} {car.model}
-            </h3>
-            <p>Price: {car.price}</p>
+    <div className="featured-wrapper">
+      <h3 className="featured-title">Featured</h3>
+      <Slider {...settings}>
+        {mockData.map((car) => (
+          <div className="featured-car" key={car.id}>
+            <div className="info-wrapper">
+              <h3>
+                {car.make} {car.model}
+              </h3>
+              <p>Price: {car.price}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

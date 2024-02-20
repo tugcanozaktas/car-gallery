@@ -1,13 +1,14 @@
 .navbar-component{
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: rgb(238, 176, 31);
     height: 100px;
     width: 100vw;
 }
 .navbar-component a{
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
 .navbar{
@@ -26,11 +27,11 @@
 .navbar-links{
     list-style-type: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease-in, font-size 0.3s ease-in;
+    transition: color 0.2s ease-in, font-size 0.3s ease-in;
 }
 
 .navbar-links:hover{
-    color: rgb(227, 227, 194);
+    color: rgb(117, 117, 117);
 }
 .navbar-logo:hover{
     font-size: 1.6rem;
