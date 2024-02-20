@@ -1,0 +1,21 @@
+.slick-slider{
+    width: 500px;
+    align-self: center;
+}
+
+.featured-car{
+    height: 200px;
+    background-image: url("/public/car.webp");
+    background-size: cover;
+}
+
+.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 150, 150, 0.065);
+    backdrop-filter: blur(10px);
+}
