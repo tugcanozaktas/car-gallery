@@ -1,36 +1,61 @@
 .search-wrapper{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .cars-page-wrapper{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 .search-bar{
   background-color: rgb(238, 176, 31);;
   height: 100px;
-  width: 100vw;
+  width: 1000px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 10px;
 }
 .search-bar label{
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .search-bar input{
   height: 30px;
+  width: 176px;
   border: none;
   border-radius: 10px;
   background-color: wheat;
+  font-size: 1.5rem;
+  padding: 8px;
 }
 .search-bar button{
-  height: 30px;
+  height: 40px;
+  width: 100px;
   border: none;
   border-radius: 5px;
   background-color: wheat;
+  font-size: 1.5rem;
+  padding: 8px;
+  transition: .4s ease;
+  cursor: pointer;
+}
+
+.search-bar button:hover{
+  background-color: rgb(117, 117, 117);
+  color: rgb(238, 176, 31);
+}
+
+.search-text{
+  font-size: 2rem;
+  text-align: center;
+  color: wheat;
+}
+.search-results{
+  margin-bottom: 500px;
 }

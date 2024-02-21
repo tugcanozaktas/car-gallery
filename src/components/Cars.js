@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { fetchVehicleData } from "../services/carModels";
 import CarCard from "./CarCard";
+import SideBar from "./SortBar";
 import "../styles/Cars.css";
 
 const Cars = () => {
@@ -8,27 +9,24 @@ const Cars = () => {
   const [make, setMake] = useState("");
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
-  const [error, setError] = useState(null);
-
+  console.log(vehicleData);
   const getCars = async (event) => {
     event.preventDefault();
     try {
-      const data = await fetchVehicleData({
+      await fetchVehicleData({
         setVehicleData,
         make,
         model,
         year,
       });
-      setError(null);
     } catch (error) {
       console.error("Error fetching data:", error);
       setVehicleData(null);
-      setError("Error fetching data. Please try again.");
     }
   };
 
   return (
-    <div className="cars-page-wrapper">
+    <div id="cars" className="cars-page-wrapper">
       <form onSubmit={getCars} className="search-bar">
         <label htmlFor="make">
           Make
@@ -69,13 +67,19 @@ const Cars = () => {
       </form>
       <div className="search-results">
         {vehicleData !== null ? (
-          <div className="search-wrapper">
-            {vehicleData.records.map((car) => (
-              <CarCard key={car.record.id} car={car.record} />
-            ))}
-          </div>
+          <>
+            <SideBar
+              vehicleData={vehicleData}
+              setVehicleData={setVehicleData}
+            />
+            <div className="search-wrapper">
+              {vehicleData.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+          </>
         ) : (
-          <div>No results</div>
+          <h3 className="search-text">Search for car models!</h3>
         )}
       </div>
     </div>

@@ -3,12 +3,17 @@ import "../styles/App.css";
 import Navbar from "./Navbar";
 import Featured from "./Featured";
 import Cars from "./Cars";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Cars />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Featured />
+        <Cars />
+      </div>
+    </BrowserRouter>
   );
 }
 

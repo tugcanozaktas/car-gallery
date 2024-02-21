@@ -38,7 +38,7 @@ const Featured = () => {
   ];
 
   return (
-    <div className="featured-wrapper">
+    <div id="featured" className="featured-wrapper">
       <h3 className="featured-title">Featured</h3>
       <Slider {...settings}>
         {mockData.map((car) => (
