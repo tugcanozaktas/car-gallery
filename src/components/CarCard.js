@@ -25,7 +25,11 @@ const CarCard = ({ car }) => {
             }}
             type="button"
           >
-            <FontAwesomeIcon className="icons" icon={faCaretDown} />
+            {isClicked ? (
+              <FontAwesomeIcon className="icons" icon={faCaretUp} />
+            ) : (
+              <FontAwesomeIcon className="icons" icon={faCaretDown} />
+            )}
           </button>
         </div>
         <div

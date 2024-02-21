@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import "../styles/SortBar.css";
 
 function SideBar({ setVehicleData, vehicleData }) {
-  const [yearSort, setYearSort] = useState(null);
-  const [makeSort, setMakeSort] = useState(null);
-  const [modelSort, setModelSort] = useState(null);
   const [sortType, setSortType] = useState("");
 
   const handleSort = (event) => {
